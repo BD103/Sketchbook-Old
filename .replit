@@ -1,10 +1,11 @@
-run = "cargo run"
-entrypoint = "src/main.rs"
+run = "cargo run -p sketchbook"
+entrypoint = "README.md"
 language = "nix"
 hidden = [
     ".cargo",
     "Cargo.lock",
-    "target"
+    "target",
+    ".gitignore"
 ]
 
 [nix]
