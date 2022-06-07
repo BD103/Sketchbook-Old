@@ -1,9 +1,10 @@
-[workspace]
-members = [
-    "sketchbook",
-    "sketchbook_visual"
-]
-resolver = "2"
+[package]
+name = "sketchbook"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "~0.7.0"
 
 [profile.dev]
 opt-level = 1
