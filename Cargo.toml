@@ -1,4 +1,6 @@
 [workspace]
 members = [
-    "sketchbook"
+    "sketchbook",
+    "sketchbook_visual"
 ]
+resolver = "2"

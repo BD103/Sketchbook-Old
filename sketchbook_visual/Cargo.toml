@@ -1,0 +1,8 @@
+[package]
+name = "sketchbook_visual"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "~0.7.0"
+sketchbook = { path = "../sketchbook" }
