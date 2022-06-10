@@ -4,15 +4,9 @@ This example is broken. I will come back to this for better entity collision at 
 
 use manyvecs::Vec2f;
 
-const RAY_START: Vec2f = Vec2f {
-    x: 0.0,
-    y: 0.0,
-};
+const RAY_START: Vec2f = Vec2f { x: 0.0, y: 0.0 };
 
-const RAY_END: Vec2f = Vec2f {
-    x: 2.0,
-    y: 1.0,
-};
+const RAY_END: Vec2f = Vec2f { x: 2.0, y: 1.0 };
 
 fn main() {
     let ray_slope = RAY_END - RAY_START;

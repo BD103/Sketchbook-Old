@@ -24,9 +24,6 @@ pub const MAP_1: [Tile; 16] = [
 pub const MAP_1_META: MapMeta = MapMeta {
     width: 4,
     height: 4,
-    spawn: Vec2f {
-        x: 0.0,
-        y: 3.0,
-    },
+    spawn: Vec2f { x: 0.0, y: 3.0 },
     command_max: 3,
 };

@@ -1,4 +1,4 @@
-use macroquad::prelude::{Color, color_u8};
+use macroquad::prelude::{color_u8, Color};
 
 pub const DARK: Color = color_u8!(59, 59, 59, 255);
 pub const LIGHT: Color = color_u8!(239, 239, 239, 255);
