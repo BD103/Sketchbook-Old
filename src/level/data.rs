@@ -1,3 +1,5 @@
+#![allow(unused_imports)]
+
 use super::{
     Tile,
     Tile::{Air as A, Flag as F, Ground as G, Spikes as S},
