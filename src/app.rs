@@ -25,8 +25,8 @@ impl App {
 
     /// Draws the current level to the screen.
     pub fn draw_level(&self) {
-        use macroquad::prelude::*;
         use crate::TILE_RESOLUTION;
+        use macroquad::prelude::*;
 
         for i in 0..self.level.map.len() {
             draw_rectangle(

@@ -1,12 +1,9 @@
 use super::data::MapMeta;
 use super::Tile;
-use crate::Direction;
-
-use crate::TILE_RESOLUTION;
+use crate::{Direction, TILE_RESOLUTION};
 use manyvecs::Vec2f;
 
-const FRICTION: f32 = 0.2;
-
+/// Represents a level in the game.
 pub struct Level {
     pub map: Vec<Tile>,
     pub map_meta: MapMeta,
@@ -18,6 +15,7 @@ pub struct Level {
 }
 
 impl Level {
+    /// Loads a new level from given data and meta.
     pub fn new<const N: usize>(map: [Tile; N], meta: MapMeta) -> Self {
         use macroquad::window::{screen_height, screen_width};
 
@@ -39,21 +37,22 @@ impl Level {
         }
     }
 
-    // Level functions
+    /// Changes the gravity in the level.
     pub fn change_gravity(&mut self, gravity: Direction) {
         self.gravity = gravity;
     }
 
+    /// Updates the level.
     pub fn update(&mut self) {
         self.move_player();
     }
 
-    // Map functions
+    /// QOL function that returns the tile at a given x and y coordinate.
     pub fn map_tile(&self, x: usize, y: usize) -> Tile {
         self.map[x + y * self.map_meta.height]
     }
 
-    // Player functions
+    /// Simulates the movement of the player.
     fn move_player(&mut self) {
         match self.gravity {
             Direction::Down => self.player_pos.y -= 0.5,

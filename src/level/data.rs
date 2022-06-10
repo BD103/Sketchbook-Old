@@ -2,10 +2,10 @@ use super::{
     Tile,
     Tile::{Air as A, Flag as F, Ground as G, Spikes as S},
 };
+use crate::Direction::{Down as D, Left as L, Right as R, Up as U};
 use manyvecs::Vec2f;
 
-use crate::Direction::{Down as D, Left as L, Right as R, Up as U};
-
+/// Contains metadata about the current level.
 pub struct MapMeta {
     pub width: usize,
     pub height: usize,
