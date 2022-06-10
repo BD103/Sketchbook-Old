@@ -1,5 +1,5 @@
 mod app;
-// mod level;
+mod level;
 
 pub mod palette;
 
