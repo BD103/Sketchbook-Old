@@ -2,6 +2,7 @@ use super::data::MapMeta;
 use super::Tile;
 use crate::Direction;
 
+use crate::TILE_RESOLUTION;
 use manyvecs::Vec2f;
 
 const FRICTION: f32 = 0.2;
@@ -13,12 +14,19 @@ pub struct Level {
 
     pub player_pos: Vec2f,
     // player_delta: Vec2f,
+    pub screen_offset: Vec2f,
 }
 
 impl Level {
     pub fn new<const N: usize>(map: [Tile; N], meta: MapMeta) -> Self {
+        use macroquad::window::{screen_height, screen_width};
+
         // Copy bytes before moving meta
         let player_pos = meta.spawn;
+        let screen_offset = Vec2f::new(
+            (screen_width() / 2.0) - (meta.width / 2 * TILE_RESOLUTION.1) as f32,
+            (screen_height() / 2.0) - (meta.height / 2 * TILE_RESOLUTION.1) as f32,
+        );
 
         Level {
             map: Vec::from(map),
@@ -27,6 +35,7 @@ impl Level {
 
             player_pos,
             // player_delta: Vec2f::new(0.0, 0.0),
+            screen_offset,
         }
     }
 
