@@ -1,5 +1,7 @@
-pub const DARK: [f32; 4] = [59.0 / 255.0, 59.0 / 255.0, 59.0 / 255.0, 1.0];
-pub const LIGHT: [f32; 4] = [239.0 / 255.0, 239.0 / 255.0, 239.0 / 255.0, 1.0];
-pub const BLUE: [f32; 4] = [68.0 / 255.0, 102.0 / 255.0, 221.0 / 255.0, 1.0];
-pub const PINK: [f32; 4] = [224.0 / 255.0, 50.0 / 255.0, 148.0 / 255.0, 1.0];
-pub const ORANGE: [f32; 4] = [241.0 / 255.0, 154.0 / 255.0, 62.0 / 255.0, 1.0];
+use macroquad::prelude::{Color, color_u8};
+
+pub const DARK: Color = color_u8!(59, 59, 59, 255);
+pub const LIGHT: Color = color_u8!(239, 239, 239, 255);
+pub const BLUE: Color = color_u8!(68, 102, 221, 255);
+pub const PINK: Color = color_u8!(224, 50, 148, 255);
+pub const ORANGE: Color = color_u8!(241, 154, 62, 255);
