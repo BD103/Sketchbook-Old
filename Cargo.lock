@@ -831,6 +831,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "manyvecs"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6eca5258d84b7fa6a6a136e95173c1f8c05947a20c277bb635407aea4c5f3b3d"
+dependencies = [
+ "num-traits",
+]
+
+[[package]]
 name = "memchr"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1481,6 +1490,7 @@ dependencies = [
 name = "sketchbook"
 version = "0.1.0"
 dependencies = [
+ "manyvecs",
  "piston",
  "piston2d-graphics",
  "piston2d-opengl_graphics",
