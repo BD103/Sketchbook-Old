@@ -11,4 +11,4 @@ pistoncore-glutin_window = "0.70.1"
 piston2d-opengl_graphics = "0.81.0"
 
 # Math
-manyvecs = "~0.3"
+manyvecs = { version = "~0.3", default-features = false, features = ["macroed"] }
